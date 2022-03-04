@@ -2,5 +2,14 @@
    .nav-list {
       @include flex();
       gap: 3em;
+
+      a {
+         text-transform: uppercase;
+         color: $black;
+
+         &.active {
+            color: $primary;
+         }
+      }
    }
 }

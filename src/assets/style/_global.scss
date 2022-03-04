@@ -17,6 +17,7 @@
 
 html {
    scroll-behavior: smooth;
+   scroll-padding-top: 70px;
 }
 
 body {
@@ -77,11 +78,12 @@ footer {
    text-transform: capitalize;
    background-color: $primary;
    color: $white;
+   border-radius: $border-radius;
    transition: $transition;
 
    &:hover {
       background-color: $black;
-      box-shadow: 0.3em 0.3em 0.5em -0.2em $primary;
+      box-shadow: 5px 5px 0.5em -0.1em $primary;
    }
 
    &:active {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
 import NotFound from "./components/home/NotFound";
-import Products from "./components/home/Products";
+import Products from "./components/products/Products";
 import webContext from "./context/Context";
 
 function App() {

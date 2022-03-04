@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -76,16 +77,17 @@ footer {
   margin-top: 2em;
   padding: 0.3em 1.3em;
   text-transform: capitalize;
-  background-color: #ec7c13;
+  background-color: #ec5113;
   color: white;
+  border-radius: 0.3em;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .btn:hover {
   background-color: #1d1e20;
-  -webkit-box-shadow: 0.3em 0.3em 0.5em -0.2em #ec7c13;
-          box-shadow: 0.3em 0.3em 0.5em -0.2em #ec7c13;
+  -webkit-box-shadow: 5px 5px 0.5em -0.1em #ec5113;
+          box-shadow: 5px 5px 0.5em -0.1em #ec5113;
 }
 
 .btn:active {
@@ -127,6 +129,15 @@ footer {
   gap: 3em;
 }
 
+.nav .nav-list a {
+  text-transform: uppercase;
+  color: #1d1e20;
+}
+
+.nav .nav-list a.active {
+  color: #ec5113;
+}
+
 .header {
   height: 70px;
 }
@@ -150,13 +161,65 @@ footer {
   height: inherit;
 }
 
+.header .logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .logo a {
+  color: #ec5113;
+}
+
 .showcase {
   background-color: white;
+}
+
+.showcase .slide-cover {
+  position: relative;
+}
+
+.showcase .slide-cover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
 }
 
 .showcase .slide {
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+.showcase .slide .content {
+  text-align: center;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.showcase .slide .content .title,
+.showcase .slide .content .sub-title {
+  color: white;
+}
+
+.showcase .slide .content .title {
+  margin-bottom: .3em;
 }
 /*# sourceMappingURL=style.css.map */
