@@ -1,0 +1,19 @@
+@mixin flex($fd: row, $jc: space-between, $ai: center) {
+   display: flex;
+   flex-direction: $fd;
+   flex-wrap: nowrap;
+   justify-content: $jc;
+   align-items: $ai;
+}
+
+@mixin grid($jc: space-between, $ai: center) {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+   grid-auto-flow: dense;
+   justify-content: $jc;
+   align-items: $ai;
+}
+
+
+$border-radius: .3em;
+$transition: all .4s ease-in-out;

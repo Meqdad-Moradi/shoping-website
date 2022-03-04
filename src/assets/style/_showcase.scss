@@ -1,0 +1,8 @@
+.showcase {
+   background-color: $white;
+
+   .slide{
+      display: grid;
+      place-content: center;
+   }
+}
