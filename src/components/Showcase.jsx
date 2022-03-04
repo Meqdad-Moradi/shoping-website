@@ -19,13 +19,17 @@ const Showcase = () => {
    return (
       <div className="showcase">
          {/* slide arrow buttons */}
-         <div className="arrows-btn">
-            <div className="arrow-btn">
-               <FaChevronLeft />
-            </div>
-            <div className="arrow-btn">
-               <FaChevronRight />
-            </div>
+         <div
+            className="arrow-btn left"
+            onClick={() => arrows.current.slickPrev()}
+         >
+            <FaChevronLeft />
+         </div>
+         <div
+            className="arrow-btn right"
+            onClick={() => arrows.current.slickNext()}
+         >
+            <FaChevronRight />
          </div>
 
          {/* slides */}
@@ -40,7 +44,7 @@ const Showcase = () => {
                   }}
                >
                   <div className="content">
-                     <h1 className="title">Polarid Camera Apple Product</h1>
+                     <h1 className="title">Polaroid Camera Apple Product</h1>
                      <p className="sub-title">
                         Consectetur adipisicing elit. Sit, unde non ipsa quas
                         consequatur error.

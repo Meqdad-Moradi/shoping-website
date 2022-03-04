@@ -15,4 +15,86 @@
          color: $primary;
       }
    }
+
+   .toggler {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      display: none;
+
+      span {
+         display: inline-block;
+         height: 3px;
+         width: 20px;
+         margin-block: 2px;
+         transform-origin: 20px;
+         background-color: $black;
+         border-radius: $border-radius;
+         transition: $transition;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .header {
+      .nav {
+         position: fixed;
+         top: 0;
+         right: 0;
+         width: 75vw;
+         height: 100vh;
+         background-color: $black;
+         z-index: 1000;
+         transform: translateX(100%);
+         transition: $transition;
+
+         &.active{
+             transform: translateX(0);
+         }
+      }
+
+      .nav-list {
+         flex-direction: column !important;
+         justify-content: center;
+         align-items: start;
+         padding-left: 2em;
+         height: 100%;
+         gap: 1em;
+
+         li {
+            width: 100%;
+            display: grid;
+         }
+
+         a {
+            width: 100%;
+            color: $white;
+            padding: 0.5em;
+         }
+      }
+
+      .toggler {
+         @include flex(column, center);
+         padding: 0.3em 0 0.3em;
+         z-index: 9999;
+
+         &.active {
+            span {
+               background-color: $white;
+            }
+
+            span {
+               &:nth-of-type(1) {
+                  transform: rotate(-45deg);
+               }
+               &:nth-of-type(2) {
+                  opacity: 0;
+               }
+               &:nth-of-type(3) {
+                  transform: rotate(45deg);
+               }
+            }
+         }
+      }
+   }
 }

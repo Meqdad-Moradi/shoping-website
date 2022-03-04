@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ onToggle }) => {
    return (
-      <nav className="nav">
+      <nav className={onToggle ? "nav active" : "nav"}>
          <ul className="nav-list">
             <li>
                <NavLink to="/">Home</NavLink>
