@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -102,6 +102,11 @@ footer {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
+}
+
+.main-title {
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 .container {
@@ -201,8 +206,8 @@ footer {
     z-index: 1000;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   .header .nav.active {
     -webkit-transform: translateX(0);
@@ -412,5 +417,16 @@ footer {
   .showcase .content .title {
     line-height: 1.5;
   }
+}
+
+#product-section .product-list-item {
+  background-color: red;
+}
+
+#product-section .product-list-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 /*# sourceMappingURL=style.css.map */

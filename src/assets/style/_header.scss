@@ -46,7 +46,7 @@
          background-color: $black;
          z-index: 1000;
          transform: translateX(100%);
-         transition: $transition;
+         transition: all .5s ease-in-out;
 
          &.active{
              transform: translateX(0);
