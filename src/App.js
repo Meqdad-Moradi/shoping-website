@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
 import Home from "./components/home/Home";
 import NotFound from "./components/home/NotFound";
 import Products from "./components/products/Products";
@@ -34,6 +35,7 @@ function App() {
                <Route path="/home" element={<Navigate to="/" />} />
                <Route path="/" element={<Home />} />
                <Route path="/products" element={<Products />} />
+               <Route path="/cart" element={<Cart />} />
                <Route path="*" element={<NotFound />} />
             </Routes>
          </webContext.Provider>

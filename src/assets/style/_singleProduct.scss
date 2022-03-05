@@ -1,0 +1,35 @@
+.single-product {
+   .container {
+      @include grid();
+      gap: 3em;
+   }
+
+   .img-box {
+      img {
+         aspect-ratio: 1 / 1;
+         object-fit: cover;
+         height: 100%;
+      }
+   }
+
+   .content {
+      .product-name {
+         text-transform: capitalize;
+         margin-bottom: 1em;
+      }
+
+      .product-details {
+         margin-top: 2em;
+      }
+
+      .price {
+         color: $primary;
+         font-weight: 600;
+      }
+
+      .btn.add-to-cart {
+         border: none;
+         outline: none;
+      }
+   }
+}

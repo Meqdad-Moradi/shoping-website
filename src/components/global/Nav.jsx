@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Nav = ({ onToggle }) => {
    return (
@@ -19,6 +20,11 @@ const Nav = ({ onToggle }) => {
             </li>
             <li>
                <NavLink to="/contact">Contact</NavLink>
+            </li>
+            <li className="cart">
+               <NavLink to="/cart">
+                  <FaShoppingCart />
+               </NavLink>
             </li>
          </ul>
       </nav>
