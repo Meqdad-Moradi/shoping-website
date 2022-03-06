@@ -1,17 +1,16 @@
-import React, { useContext } from "react";
-import webContext from "../../context/Context";
+import React from "react";
 import Header from "../Header";
-import Showcase from "./Showcase";
+import Exclosive from "./Exclosive";
 import ProductSection from "./ProductSection";
+import Showcase from "./Showcase";
 
 const Home = () => {
-   const context = useContext(webContext);
-
    return (
       <>
          <Header />
          <Showcase />
          <ProductSection />
+         <Exclosive />
       </>
    );
 };

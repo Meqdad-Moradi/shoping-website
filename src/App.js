@@ -34,18 +34,12 @@ function App() {
    useEffect(() => {
       getCartData();
       getDate();
-      console.log("cart");
-   }, []);
-
-   useEffect(() => {
-      getDate();
-      console.log("data");
    }, []);
 
    // ADD ITEM TO CART
-   const handleAdd = async (id) =>{
-      console.log(id)
-   }
+   const handleAdd = async (id) => {
+      console.log(id);
+   };
 
    // DELTE ITEM FORM CART
    const handleDelete = async (id) => {

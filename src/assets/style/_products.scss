@@ -1,16 +1,13 @@
-.product-list-item {
-   .slick-dots li button::before {
-      content: "";
-   }
-
-   img {
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 1 / 1;
-   }
-}
-
 .popular-products {
+   .product-content {
+      @include grid();
+      gap: 2em;
+   }
+
+   .card {
+      margin: 0;
+   }
+
    .main-title {
       border-top: 1px solid $gray;
       padding-top: 4em;

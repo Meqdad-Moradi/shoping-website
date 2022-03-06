@@ -2,7 +2,7 @@
    "products": [
       {
          "id": 1,
-         "prjName": "product name three",
+         "prdName": "product name one",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -17,7 +17,7 @@
       },
       {
          "id": 2,
-         "prjName": "product name three",
+         "prdName": "product name two",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -32,7 +32,7 @@
       },
       {
          "id": 3,
-         "prjName": "product name three",
+         "prdName": "product name three",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -47,7 +47,7 @@
       },
       {
          "id": 4,
-         "prjName": "product name three",
+         "prdName": "product name four",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -62,7 +62,7 @@
       },
       {
          "id": 5,
-         "prjName": "product name three",
+         "prdName": "product name five",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -77,7 +77,7 @@
       },
       {
          "id": 6,
-         "prjName": "product name three",
+         "prdName": "product name six",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,
@@ -92,7 +92,7 @@
       },
       {
          "id": 7,
-         "prjName": "product name three",
+         "prdName": "product name seven",
          "configuration": "Echo dot",
          "price": 35.28,
          "rate": 5,

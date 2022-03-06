@@ -47,22 +47,49 @@ const ProductSection = () => {
       <section id="product-section">
          <div className="container">
             <MainTitle
-               titleText="Our products"
+               titleText="featured products"
                subTitleText="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             />
 
             <div className="product-list">
                <Slider {...settings}>
                   {context.products.map((item, i) => {
-                     const { img } = item;
+                     const { prdName, rate, img, price } = item;
                      return (
                         <div key={i} className="product-list-item">
-                           <Card img={img} />
+                           <Card
+                              img={img}
+                              prdName={prdName}
+                              rate={rate}
+                              price={price}
+                           />
                         </div>
                      );
                   })}
                </Slider>
             </div>
+
+            <section className="latest-products">
+               <MainTitle
+                  titleText="latest products"
+                  subTitleText="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+               />
+               <div className="latest-products-card">
+                  {context.products.map((item, i) => {
+                     const { prdName, rate, img, price } = item;
+                     return (
+                        <div key={i} className="product-list-item">
+                           <Card
+                              img={img}
+                              prdName={prdName}
+                              rate={rate}
+                              price={price}
+                           />
+                        </div>
+                     );
+                  })}
+               </div>
+            </section>
          </div>
       </section>
    );

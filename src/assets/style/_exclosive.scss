@@ -1,0 +1,29 @@
+.exclosive {
+   background: radial-gradient($light, $gray);
+
+   .cxclosive-content {
+      @include grid();
+    //   color: $white;
+
+      h4 {
+         margin-bottom: 1.5em;
+      }
+
+      .img-box {
+         position: relative;
+
+         img {
+            width: 70%;
+            object-fit: cover;
+         }
+      }
+
+      .content {
+         .btn {
+            // background-color: $black;
+            outline: none;
+            border: none;
+         }
+      }
+   }
+}

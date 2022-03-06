@@ -1,0 +1,32 @@
+.card {
+   @include flex(column, start , start);
+   background-color: $light;
+   margin: 0 0.5em;
+   border-radius: $border-radius;
+   overflow: hidden;
+
+   .content {
+      padding: 1em;
+
+      p {
+         margin: 0;
+      }
+
+      .title {
+         font-size: 1.25rem;
+      }
+
+      .rate {
+         font-size: 0.7em;
+      }
+
+      .price {
+         font-weight: 600;
+         color: $primary;
+         margin-top: 0.5em;
+         span {
+            margin-right: 0.2em;
+         }
+      }
+   }
+}

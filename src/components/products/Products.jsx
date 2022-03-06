@@ -56,20 +56,25 @@ const Products = () => {
                   titleText="Products related to this item"
                   subTitleText="sponsored"
                />
-               <Slider {...settings}>
+               <div className="product-content">
                   {context.products.map((item, i) => {
-                     const { img } = item;
+                     const { prdName, rate, img, price } = item;
                      return (
                         <div
                            key={i}
                            className="product-list-item"
                            onClick={() => context.onAdd(item.id)}
                         >
-                           <Card img={img} />
+                           <Card
+                              img={img}
+                              prdName={prdName}
+                              rate={rate}
+                              price={price}
+                           />
                         </div>
                      );
                   })}
-               </Slider>
+               </div>
             </div>
          </section>
       </>
