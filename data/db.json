@@ -28,5 +28,39 @@
          "id": 7,
          "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
       }
+   ],
+   "cart": [
+      {
+         "id": 1,
+         "prjName": "product name one",
+         "image": "https://images.unsplash.com/photo-1638913662584-731da41f5a59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "color": "black"
+      },
+      {
+         "id": 1,
+         "prjName": "product name two",
+         "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "color": "black"
+      },
+      {
+         "id": 1,
+         "prjName": "product name three",
+         "image": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "color": "black"
+      },
+      {
+         "id": 1,
+         "prjName": "product name three",
+         "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "color": "black"
+      }
    ]
 }

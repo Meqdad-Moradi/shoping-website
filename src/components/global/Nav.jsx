@@ -21,7 +21,7 @@ const Nav = ({ onToggle }) => {
             <li>
                <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li className="cart">
+            <li className="cart-btn">
                <NavLink to="/cart">
                   <FaShoppingCart />
                </NavLink>

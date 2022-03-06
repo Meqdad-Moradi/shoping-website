@@ -1,7 +1,19 @@
 .nav {
+   background-color: $white;
    .nav-list {
       @include flex();
       gap: 3em;
+
+      li {
+         background-color: $white;
+      }
+
+      .cart-btn {
+         a {
+            display: grid;
+            place-content: center;
+         }
+      }
 
       a {
          color: $black;
