@@ -1,8 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import webContext from "../../context/Context";
 
 const Nav = ({ onToggle }) => {
+   const context = useContext(webContext);
+
    return (
       <nav className={onToggle ? "nav active" : "nav"}>
          <ul className="nav-list">
@@ -25,6 +28,7 @@ const Nav = ({ onToggle }) => {
                <NavLink to="/cart">
                   <FaShoppingCart />
                </NavLink>
+               <span className="cart-amount">{context.cartData.length}</span>
             </li>
          </ul>
       </nav>

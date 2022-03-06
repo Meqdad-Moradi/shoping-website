@@ -8,6 +8,8 @@
 
 .cart-page {
    margin-top: 2em;
+   margin-bottom: 2em;
+
    .cart-content {
       background-color: $white;
       padding: 2em;
@@ -18,92 +20,104 @@
       margin-bottom: 2em;
    }
 
+   .cart-main {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 25% auto 10%;
+      grid-auto-flow: dense;
+      padding-block: 2em;
+      border-top: 1px solid $gray;
+
+      &:last-of-type {
+         border-bottom: 1px solid $gray;
+      }
+
+      .img-box {
+         order: -1;
+         min-height: 15em;
+         overflow: hidden;
+         position: relative;
+
+         img {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .article-details {
+         @include flex(column, start, start);
+         width: 100%;
+
+         p,
+         strong,
+         a,
+         input,
+         label,
+         button {
+            color: $dark;
+         }
+
+         h2 {
+            text-transform: capitalize;
+         }
+
+         strong {
+            font-weight: 600;
+            margin-right: 5px;
+         }
+
+         .article-details-footer {
+            @include flex();
+            gap: 1em;
+            margin-top: auto;
+            justify-self: end;
+
+            button {
+               outline: none;
+               border: none;
+               background-color: $white;
+               color: $dark;
+               cursor: pointer;
+               user-select: none;
+            }
+
+            span {
+               color: $gray;
+            }
+         }
+      }
+
+      .price-cover {
+         margin-left: auto;
+
+         p {
+            margin-top: 0;
+            font-weight: 600;
+         }
+      }
+   }
+
    .cart-footer {
       display: grid;
       padding-block: 0;
+      padding-top: 1.5em;
       margin-left: auto;
+      display: flex;
 
       p {
          margin-left: auto;
-      }
-   }
-}
-
-.cart-main {
-   display: grid;
-   gap: 2em;
-   grid-template-columns: 25% auto 10%;
-   grid-auto-flow: dense;
-   padding-block: 2em;
-   border-top: 1px solid $gray;
-
-   &:last-of-type {
-      border-bottom: 1px solid $gray;
-   }
-
-   .img-box {
-      order: -1;
-      min-height: 15em;
-      overflow: hidden;
-      position: relative;
-
-      img {
-         position: absolute;
-         inset: 0;
-         height: 100%;
-         width: 100%;
-         object-fit: cover;
-      }
-   }
-
-   .article-details {
-      @include flex(column, start, start);
-      width: 100%;
-
-      p,
-      strong,
-      a,
-      input,
-      label,
-      button {
-         color: $dark;
-      }
-
-      h2 {
-         text-transform: capitalize;
-      }
-
-      strong {
-         font-weight: 600;
-         margin-right: 5px;
-      }
-
-      .article-details-footer {
-         @include flex();
-         gap: 1em;
-         margin-top: auto;
-         justify-self: end;
-
-         button {
-            outline: none;
-            border: none;
-            background-color: $white;
-            color: $dark;
-            cursor: pointer;
-         }
-
-         span {
-            color: $gray;
-         }
-      }
-   }
-
-   .price-cover {
-      margin-left: auto;
-
-      p {
          margin-top: 0;
+         line-height: 1;
+         color: $dark;
+         margin-right: 0.5em;
+      }
+
+      h3 {
          font-weight: 600;
+         line-height: 1;
       }
    }
 }

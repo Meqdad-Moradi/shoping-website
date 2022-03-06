@@ -4,14 +4,27 @@
       @include flex();
       gap: 3em;
 
-      li {
-         background-color: $white;
-      }
+      
 
       .cart-btn {
+         position: relative;
+         background-color: inherit;
+
          a {
-            display: grid;
-            place-content: center;
+            @include flex();
+            font-size: 1.25rem;
+         }
+
+         .cart-amount {
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            background-color: $primary;
+            color: $white;
+            line-height: 0.5;
+            padding: 5px;
+            border-radius: $border-radius;
+            font-size: 10px;
          }
       }
 

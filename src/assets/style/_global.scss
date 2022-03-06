@@ -75,8 +75,10 @@ footer {
 .btn {
    display: inline-block;
    margin-top: 2em;
-   padding: 0.3em 1.3em;
+   padding: 0.3em 1em;
    text-transform: capitalize;
+   cursor: pointer;
+   user-select: none;
    background-color: $primary;
    color: $white;
    border-radius: $border-radius;
@@ -102,7 +104,7 @@ footer {
    letter-spacing: 2px;
 }
 
-.main-title{
+.main-title {
    margin-bottom: 2em;
    text-align: center;
 }

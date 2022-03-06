@@ -8,20 +8,54 @@ import webContext from "./context/Context";
 
 function App() {
    const [products, setProducts] = useState([]);
+   const [cartData, setCartData] = useState([]);
+
+   // get product data from database
+   const getDate = async () => {
+      try {
+         const res = await fetch("http://localhost:8000/products");
+         const data = await res.json();
+         setProducts(data);
+      } catch (error) {
+         console.error(error);
+      }
+   };
+
+   // get cart data from database
+   const getCartData = async () => {
+      try {
+         const res = await fetch("http://localhost:8000/cart");
+         const data = await res.json();
+         setCartData(data);
+      } catch (error) {
+         console.error(error);
+      }
+   };
+   useEffect(() => {
+      getCartData();
+      getDate();
+      console.log("cart");
+   }, []);
 
    useEffect(() => {
-      const getDate = async () => {
-         try {
-            const res = await fetch("http://localhost:8000/products");
-            const data = await res.json();
-            setProducts(data);
-         } catch (error) {
-            console.error(error);
-         }
-      };
-
       getDate();
+      console.log("data");
    }, []);
+
+   // ADD ITEM TO CART
+   const handleAdd = async (id) =>{
+      console.log(id)
+   }
+
+   // DELTE ITEM FORM CART
+   const handleDelete = async (id) => {
+      await fetch(`http://localhost:8000/cart/${id}`, {
+         method: "DELETE",
+      });
+
+      const newitem = cartData.filter((item) => item.id !== id);
+      setCartData(newitem);
+   };
 
    return (
       <>
@@ -29,6 +63,9 @@ function App() {
             value={{
                products: products,
                setProducts: setProducts,
+               onAdd: handleAdd,
+               cartData: cartData,
+               onDelete: handleDelete,
             }}
          >
             <Routes>

@@ -2,65 +2,109 @@
    "products": [
       {
          "id": 1,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1615206671934-7a179459f679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 2,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 3,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 4,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 5,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 6,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
       },
       {
          "id": 7,
+         "prjName": "product name three",
+         "configuration": "Echo dot",
+         "price": 35.28,
+         "rate": 5,
+         "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+         "color": ["black"],
+         "info": [
+            "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+            "Material: Flexible polypropylene film – robust and tear-resistant.",
+            "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+         ],
          "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
       }
    ],
-   "cart": [
-      {
-         "id": 1,
-         "prjName": "product name one",
-         "image": "https://images.unsplash.com/photo-1638913662584-731da41f5a59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
-         "configuration": "Echo dot",
-         "price": 35.28,
-         "color": "black"
-      },
-      {
-         "id": 1,
-         "prjName": "product name two",
-         "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
-         "configuration": "Echo dot",
-         "price": 35.28,
-         "color": "black"
-      },
-      {
-         "id": 1,
-         "prjName": "product name three",
-         "image": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
-         "configuration": "Echo dot",
-         "price": 35.28,
-         "color": "black"
-      },
-      {
-         "id": 1,
-         "prjName": "product name three",
-         "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
-         "configuration": "Echo dot",
-         "price": 35.28,
-         "color": "black"
-      }
-   ]
+   "cart": []
 }

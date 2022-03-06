@@ -30,6 +30,13 @@
       .btn.add-to-cart {
          border: none;
          outline: none;
+         @include flex();
+         gap: .5em;
+         
+         span {
+            @include flex();
+            
+         }
       }
    }
 }

@@ -53,14 +53,18 @@ const Products = () => {
          <section className="popular-products">
             <div className="container">
                <MainTitle
-                  titleText="You may like these products too"
-                  subTitleText=""
+                  titleText="Products related to this item"
+                  subTitleText="sponsored"
                />
                <Slider {...settings}>
                   {context.products.map((item, i) => {
                      const { img } = item;
                      return (
-                        <div key={i} className="product-list-item">
+                        <div
+                           key={i}
+                           className="product-list-item"
+                           onClick={() => context.onAdd(item.id)}
+                        >
                            <Card img={img} />
                         </div>
                      );
