@@ -1,54 +1,18 @@
 import React, { useContext } from "react";
-import Slider from "react-slick";
 import webContext from "../../context/Context";
+import Footer from "../Footer";
 import Card from "../global/Card";
 import MainTitle from "../global/MainTitle";
 import Header from "../Header";
-import SingleProduct from "./SingleProduct";
+import ProductDetails from "./ProductDetails";
 
 const Products = () => {
    const context = useContext(webContext);
 
-   const settings = {
-      dots: true,
-      infinite: true,
-      speed: 800,
-      slidesToShow: 4,
-      slidesToScroll: 3,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      responsive: [
-         {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 3,
-               infinite: true,
-               dots: true,
-            },
-         },
-         {
-            breakpoint: 600,
-            settings: {
-               slidesToShow: 2,
-               slidesToScroll: 2,
-               initialSlide: 2,
-            },
-         },
-         {
-            breakpoint: 480,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1,
-            },
-         },
-      ],
-   };
-
    return (
       <>
          <Header />
-         <SingleProduct />
+         <ProductDetails />
 
          <section className="popular-products">
             <div className="container">
@@ -70,6 +34,8 @@ const Products = () => {
                               prdName={prdName}
                               rate={rate}
                               price={price}
+                              btnTo=""
+                              btnText="add to cart"
                            />
                         </div>
                      );
@@ -77,6 +43,8 @@ const Products = () => {
                </div>
             </div>
          </section>
+
+         <Footer />
       </>
    );
 };

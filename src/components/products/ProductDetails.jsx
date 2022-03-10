@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import webContext from "../../context/Context";
 
-const SingleProduct = () => {
+const ProductDetails = () => {
    const context = useContext(webContext);
 
    return (
-      <div className="single-product">
+      <section className="single-product">
          <div className="container">
             <div className="img-box">
                <img
                   src={
-                     "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+                     "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
                   }
                   alt="product_image"
                />
@@ -48,8 +48,8 @@ const SingleProduct = () => {
                </div>
             </div>
          </div>
-      </div>
+      </section>
    );
 };
 
-export default SingleProduct;
+export default ProductDetails;

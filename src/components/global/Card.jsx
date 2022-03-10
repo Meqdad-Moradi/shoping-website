@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "./Button";
 
-const Card = ({ rate, img, price, prdName }) => {
+const Card = ({ rate, img, price, prdName, btnTo, btnText }) => {
    return (
       <div className="card">
          <div className="img-box">
@@ -18,6 +18,7 @@ const Card = ({ rate, img, price, prdName }) => {
                <span>$</span>
                {price}
             </p>
+            <Button to={btnTo} btnText={btnText} />
          </div>
       </div>
    );

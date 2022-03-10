@@ -1,5 +1,8 @@
 .header {
    height: 70px;
+   box-shadow: 0 5px 5px -6px rgba(0, 0, 0, 0.2);
+   position: relative;
+   z-index: 9999;
 
    .container {
       @include flex();
@@ -46,10 +49,10 @@
          background-color: $black;
          z-index: 1000;
          transform: translateX(100%);
-         transition: all .5s ease-in-out;
+         transition: all 0.5s ease-in-out;
 
-         &.active{
-             transform: translateX(0);
+         &.active {
+            transform: translateX(0);
          }
       }
 

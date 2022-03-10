@@ -1,9 +1,10 @@
 .card {
-   @include flex(column, start , start);
+   @include flex(column, start, start);
    background-color: $light;
    margin: 0 0.5em;
    border-radius: $border-radius;
    overflow: hidden;
+   transition: $transition;
 
    .content {
       padding: 1em;

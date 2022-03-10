@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/home/Home";
 import NotFound from "./components/home/NotFound";
+import ProductDetails from "./components/products/ProductDetails";
 import Products from "./components/products/Products";
 import webContext from "./context/Context";
 
@@ -66,6 +67,7 @@ function App() {
                <Route path="/home" element={<Navigate to="/" />} />
                <Route path="/" element={<Home />} />
                <Route path="/products" element={<Products />} />
+               <Route path="/productDetails" element={<ProductDetails />} />
                <Route path="/cart" element={<Cart />} />
                <Route path="*" element={<NotFound />} />
             </Routes>

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../global/Button";
 import MainTitle from "../global/MainTitle";
 import smartWatch from "./../../assets/images/smart-watch.png";
 
@@ -16,7 +17,7 @@ const Cta = () => {
                      titleText="smart brand"
                      subTitleText="Repellat doloribus deserunt voluptatum praesentium, incidunt fugiat."
                   />
-                  <button className="btn">buy now</button>
+                  <Button to="/singleProduct" btnText="buy now" />
                </div>
             </div>
          </div>

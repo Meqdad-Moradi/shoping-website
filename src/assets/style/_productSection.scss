@@ -11,13 +11,19 @@
 
 .latest-products {
    margin-top: 2em;
+   
    .latest-products-card {
       @include grid($ai: start);
-      gap: 2em;
+      gap: 2.5em;
 
       .card {
          margin: 0;
-         box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+         box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
+
+         &:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+         }
       }
    }
 }

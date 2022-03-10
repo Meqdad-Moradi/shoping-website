@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import webContext from "../../context/Context";
+import Footer from "../Footer";
 import Header from "../Header";
 
 const Cart = () => {
@@ -61,9 +62,7 @@ const Cart = () => {
                                       </select>{" "}
                                       <span>|</span>
                                       <button
-                                         onClick={() =>
-                                            context.onDelete(id)
-                                         }
+                                         onClick={() => context.onDelete(id)}
                                       >
                                          delete
                                       </button>{" "}
@@ -100,6 +99,8 @@ const Cart = () => {
                </div>
             </div>
          </div>
+
+         <Footer />
       </div>
    );
 };

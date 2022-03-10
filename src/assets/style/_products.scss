@@ -1,11 +1,18 @@
 .popular-products {
+   padding-top: 0;
+
    .product-content {
       @include grid();
-      gap: 2em;
+      gap: 2.5em;
    }
 
    .card {
       margin: 0;
+
+      &:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+      }
    }
 
    .main-title {
