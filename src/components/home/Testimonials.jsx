@@ -16,7 +16,7 @@ const Testimonials = () => {
                   .map((_, i) => {
                      return (
                         <div className="content" key={i}>
-                           <h1>hellow guys</h1>
+                           <h1>"hello guys"</h1>
                            <p>
                               Lorem ipsum dolor sit amet consectetur adipisicing
                               elit. Voluptates nisi mollitia enim ipsam fugiat

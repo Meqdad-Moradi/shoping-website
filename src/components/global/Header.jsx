@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Logo from "./global/Logo";
-import Nav from "./global/Nav";
+import Logo from "./Logo";
+import Nav from "./Nav";
 
 const Header = () => {
    const [toggled, setToggled] = useState(false);

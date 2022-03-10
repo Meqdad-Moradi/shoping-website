@@ -39,7 +39,17 @@ function App() {
 
    // ADD ITEM TO CART
    const handleAdd = async (id) => {
-      console.log(id);
+      const newItem = products.find((item) => item.id === id);
+
+      const res = await fetch("http://localhost:8000/cart", {
+         method: "POST",
+         headers: {
+            "content-type": "Application/json",
+         },
+         body: JSON.stringify(newItem),
+      });
+
+      setCartData([...cartData, newItem]);
    };
 
    // DELTE ITEM FORM CART
@@ -52,6 +62,11 @@ function App() {
       setCartData(newitem);
    };
 
+   // SHOW SINGLE PRODUCT
+   const showSingleProduct = (id) => {
+      console.log(id);
+   };
+
    return (
       <>
          <webContext.Provider
@@ -60,6 +75,7 @@ function App() {
                setProducts: setProducts,
                onAdd: handleAdd,
                cartData: cartData,
+               onshow: showSingleProduct,
                onDelete: handleDelete,
             }}
          >

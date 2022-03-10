@@ -11,8 +11,12 @@ const Card = ({ rate, img, price, prdName, btnTo, btnText }) => {
             <p className="title">{prdName}</p>
             {Array(rate)
                .fill("")
-               .map((_) => {
-                  return <span className="rate">⭐</span>;
+               .map((_, i) => {
+                  return (
+                     <span key={i} className="rate">
+                        ⭐
+                     </span>
+                  );
                })}
             <p className="price">
                <span>$</span>

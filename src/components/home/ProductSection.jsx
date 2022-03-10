@@ -62,7 +62,7 @@ const ProductSection = () => {
                               prdName={prdName}
                               rate={rate}
                               price={price}
-                              btnTo="/product"
+                              btnTo="/products"
                               btnText="show product"
                            />
                         </div>
@@ -86,8 +86,8 @@ const ProductSection = () => {
                               prdName={prdName}
                               rate={rate}
                               price={price}
-                              btnTo="/cart"
-                              btnText="add to cart"
+                              btnTo="/productDetails"
+                              btnText="show product"
                            />
                         </div>
                      );

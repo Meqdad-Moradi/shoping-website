@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import webContext from "../../context/Context";
-import Footer from "../Footer";
-import Header from "../Header";
+import Footer from "../global/Footer";
+import Header from "../global/Header";
 
 const Cart = () => {
    const context = useContext(webContext);

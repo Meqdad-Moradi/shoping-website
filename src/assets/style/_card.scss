@@ -6,6 +6,19 @@
    overflow: hidden;
    transition: $transition;
 
+   &:hover {
+      .img-box img {
+         transform: scale(1.1);
+      }
+   }
+   .img-box {
+      overflow: hidden;
+
+      img {
+         transition: $transition;
+      }
+   }
+
    .content {
       padding: 1em;
 
@@ -23,7 +36,7 @@
 
       .price {
          font-weight: 600;
-         color: $primary;
+         color: $secondary;
          margin-top: 0.5em;
          span {
             margin-right: 0.2em;

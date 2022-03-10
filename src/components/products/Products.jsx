@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import webContext from "../../context/Context";
-import Footer from "../Footer";
 import Card from "../global/Card";
+import Footer from "../global/Footer";
+import Header from "../global/Header";
 import MainTitle from "../global/MainTitle";
-import Header from "../Header";
-import ProductDetails from "./ProductDetails";
 
 const Products = () => {
    const context = useContext(webContext);
@@ -12,14 +11,20 @@ const Products = () => {
    return (
       <>
          <Header />
-         <ProductDetails />
 
-         <section className="popular-products">
+         <section className="products">
             <div className="container">
-               <MainTitle
-                  titleText="Products related to this item"
-                  subTitleText="sponsored"
-               />
+               <div className="banner">
+                  <img
+                     src="https://images.unsplash.com/photo-1604759695540-3012f9682c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+                     alt="banner"
+                  />
+                  <MainTitle
+                     titleText="our products"
+                     subTitleText="sponsored"
+                  />
+               </div>
+
                <div className="product-content">
                   {context.products.map((item, i) => {
                      const { prdName, rate, img, price } = item;
@@ -35,7 +40,7 @@ const Products = () => {
                               rate={rate}
                               price={price}
                               btnTo=""
-                              btnText="add to cart"
+                              btnText="show product"
                            />
                         </div>
                      );

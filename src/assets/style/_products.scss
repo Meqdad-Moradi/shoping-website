@@ -1,9 +1,47 @@
-.popular-products {
+.products {
    padding-top: 0;
+
+   .banner {
+      max-height: 30vh;
+      height: 30vh;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      img {
+         position: absolute;
+         inset: 0;
+         object-position: center;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         grid-column: 1 / -1;
+         grid-row: 1 / -1;
+         z-index: -1;
+      }
+
+      .main-title {
+         margin-bottom: 0;
+         height: fit-content;
+         align-self: center;
+         padding: 2em;
+         z-index: 2;
+         grid-column: 1 / -1;
+         grid-row: 1 / -1;
+
+         // h1,
+         // p {
+         //    color: $white;
+         // }
+      }
+   }
 
    .product-content {
       @include grid();
       gap: 2.5em;
+      margin-top: 3em;
+      background-color: $white;
    }
 
    .card {
@@ -16,7 +54,6 @@
    }
 
    .main-title {
-      border-top: 1px solid $gray;
       padding-top: 4em;
    }
 }
