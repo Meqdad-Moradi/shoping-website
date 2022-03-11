@@ -91,7 +91,7 @@ footer {
 }
 .btn:hover {
   background-color: #1d1e20;
-  box-shadow: 5px 5px 0.5em -0.1em #cc3858;
+  box-shadow: 5px 5px 0.5em -0.2em #cc3858;
   transform: translateY(-3px);
 }
 .btn:active {
@@ -209,6 +209,57 @@ footer {
 }
 .nav .nav-list a.active {
   color: #cc3858;
+}
+
+.form-control {
+  position: relative;
+}
+.form-control + .form-control {
+  margin-top: 1em;
+}
+.form-control input {
+  width: 100%;
+  padding: 0.4em 1em;
+  border: 1px solid #cfd0d3;
+  border-radius: 0.3em;
+  color: #f6f9f9;
+  background-color: inherit;
+  outline: 0;
+  transition: all 0.4s ease-in-out;
+  transition-duration: 0.1s;
+}
+.form-control input:focus {
+  outline: 3px solid #d96c84;
+}
+.form-control label {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  padding: 0 0.2em;
+  color: #cfd0d3;
+  transition: all 0.4s ease-in-out;
+  transition-duration: 0.2s;
+  cursor: text;
+}
+.form-control input:not(:-moz-placeholder-shown) ~ label {
+  top: 0;
+  left: 0.5em;
+  font-size: 14px;
+  background-color: #303236;
+}
+.form-control input:not(:-ms-input-placeholder) ~ label {
+  top: 0;
+  left: 0.5em;
+  font-size: 14px;
+  background-color: #303236;
+}
+.form-control input:focus ~ label,
+.form-control input:not(:placeholder-shown) ~ label {
+  top: 0;
+  left: 0.5em;
+  font-size: 14px;
+  background-color: #303236;
 }
 
 .header {
@@ -412,6 +463,34 @@ footer {
     line-height: 1.5;
   }
 }
+.product-list {
+  position: relative;
+}
+.product-list:hover .arrow {
+  opacity: 1;
+}
+.product-list .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  padding: 0.5em 0.2em;
+  background-color: white;
+  outline: 0;
+  border: 1px solid #cfd0d3;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.product-list .arrow.left {
+  left: 0;
+}
+.product-list .arrow.right {
+  right: 0;
+}
+
 .product-list-item {
   margin: 0;
   padding: 0;
@@ -477,13 +556,43 @@ footer {
   align-items: center;
   gap: 2.5em;
   margin-top: 2.5em;
+  position: relative;
+}
+.testimonials-content:hover .arrow {
+  opacity: 1;
+}
+.testimonials-content .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  padding: 0.5em 0.2em;
+  background-color: white;
+  outline: 0;
+  border: 1px solid #cfd0d3;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.testimonials-content .arrow.left {
+  left: 0;
+}
+.testimonials-content .arrow.right {
+  right: 0;
 }
 .testimonials-content .content {
+  display: flex;
+  gap: 1em !important;
+}
+.testimonials-content .content > div {
   background-color: #f6f9f9;
   padding: 2em;
-  box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.3);
+  margin: 0 1em;
 }
-.testimonials-content .content strong, .testimonials-content .content h1 {
+.testimonials-content .content strong,
+.testimonials-content .content h1 {
   text-transform: capitalize;
 }
 
@@ -615,7 +724,6 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #303236;
-  text-align: center;
   max-width: 500px;
   padding: 2em;
   border-radius: 0.3em;
@@ -623,69 +731,18 @@ footer {
 }
 #login-page .login-content .main-title > * {
   color: #f6f9f9;
+  text-align: center;
 }
-#login-page .login-content a {
-  color: #f6f9f9;
-  display: block;
-  margin-top: 1em;
-  text-align: left;
-}
-#login-page .form-control {
-  position: relative;
-}
-#login-page .form-control + .form-control {
-  margin-top: 1em;
-}
-#login-page .form-control form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#login-page .form-control input {
+#login-page .login-content form {
   width: 100%;
-  padding: 0.4em 1em;
-  border: 1px solid #cfd0d3;
-  border-radius: 0.3em;
+}
+#login-page .login-content form a {
   color: #f6f9f9;
-  background-color: inherit;
-  outline: 0;
-  transition: all 0.4s ease-in-out;
-  transition-duration: 0.1s;
+  display: inline-block;
+  margin-top: 1em;
 }
-#login-page .form-control input:focus {
-  outline: 3px solid rgba(66, 193, 235, 0.7);
-}
-#login-page .form-control label {
-  position: absolute;
-  top: 50%;
-  left: 1em;
-  transform: translateY(-50%);
-  padding: 0 0.2em;
-  color: #cfd0d3;
-  transition: all 0.4s ease-in-out;
-  transition-duration: 0.2s;
-  cursor: text;
-}
-#login-page .form-control input:not(:-moz-placeholder-shown) ~ label {
-  top: 0;
-  left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
-}
-#login-page .form-control input:not(:-ms-input-placeholder) ~ label {
-  top: 0;
-  left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
-}
-#login-page .form-control input:focus ~ label,
-#login-page .form-control input:not(:placeholder-shown) ~ label {
-  top: 0;
-  left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
+#login-page .login-content form .btn {
+  width: 100%;
 }
 
 .cart {
@@ -820,4 +877,22 @@ footer {
 .cart-page .cart-footer h3 {
   font-weight: 600;
   line-height: 1;
+}
+
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.notfound h1 {
+  font-size: 4rem;
+  color: #cc3858;
+}
+.notfound a {
+  display: inline-block;
+  margin-top: 1em;
+  color: #cc3858;
 }/*# sourceMappingURL=style.css.map */

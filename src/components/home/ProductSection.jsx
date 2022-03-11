@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import Slider from "react-slick";
 import Card from "../global/Card";
 import MainTitle from "../global/MainTitle";
 import webContext from "../../context/Context";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const ProductSection = () => {
+   const arrow = useRef();
    const context = useContext(webContext);
 
    const settings = {
-      dots: true,
       infinite: true,
       speed: 800,
       slidesToShow: 4,
@@ -52,7 +53,20 @@ const ProductSection = () => {
             />
 
             <div className="product-list">
-               <Slider {...settings}>
+               <button
+                  className="arrow left"
+                  onClick={() => arrow.current.slickPrev()}
+               >
+                  <FaChevronLeft />
+               </button>
+               <button
+                  className="arrow right"
+                  onClick={() => arrow.current.slickNext()}
+               >
+                  <FaChevronRight />
+               </button>
+
+               <Slider {...settings} ref={arrow}>
                   {context.products.map((item, i) => {
                      const { prdName, rate, img, price } = item;
                      return (

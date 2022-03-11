@@ -2,13 +2,50 @@
    @include grid();
    gap: 2.5em;
    margin-top: 2.5em;
+   position: relative;
+
+   &:hover{
+      .arrow{
+         opacity: 1;
+      }
+   }
+
+   .arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      padding: 0.5em 0.2em;
+      background-color: $white;
+      outline: 0;
+      border: 1px solid $gray;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      opacity: 0;
+      transition: $transition;
+
+      &.left {
+         left: 0;
+      }
+
+      &.right {
+         right: 0;
+      }
+   }
 
    .content {
-      background-color: $light;
-      padding: 2em;
-      box-shadow: 0 0 5px -3px rgba($color: #000000, $alpha: 0.3);
+      display: flex;
+      gap: 1em !important;
 
-      strong,h1 {
+      & > div {
+         background-color: $light;
+         padding: 2em;
+         margin: 0 1em;
+      }
+
+      strong,
+      h1 {
          text-transform: capitalize;
       }
    }

@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
 import MainTitle from "../global/MainTitle";
 
 const Login = () => {
+   const [name, setName] = useState("");
+   const [password, setPassword] = useState("");
+
+   // check user name and password when user want to log in
+   const onLogin = (e) => {
+      e.preventDefault();
+
+      if (name === "" || password === "") {
+         alert("Username or password missing!");
+      }
+
+      setName("");
+      setPassword("");
+   };
+
    return (
       <>
          <Header />
@@ -12,17 +27,19 @@ const Login = () => {
             <div className="container">
                <div className="login-content">
                   <MainTitle
-                     titleText="login"
+                     titleText="Login"
                      subTitleText="We are happy to see you here :)"
                   />
 
-                  <form action="POST">
+                  <form action="POST" onSubmit={onLogin}>
                      <div className="form-control">
                         <input
                            type="text"
                            id="name"
+                           value={name}
                            autoComplete="off"
                            placeholder=" "
+                           onChange={(e) => setName(e.currentTarget.value)}
                         />
                         <label htmlFor="name">User name</label>
                      </div>
@@ -30,13 +47,15 @@ const Login = () => {
                         <input
                            type="password"
                            id="password"
+                           value={password}
                            autoComplete="off"
                            placeholder=" "
+                           onChange={(e) => setPassword(e.currentTarget.value)}
                         />
                         <label htmlFor="password">Password</label>
                      </div>
 
-                     <a href="#">forgot your password?</a>
+                     <Link to="">forgot your password?</Link>
 
                      <button className="btn">log in</button>
                   </form>
