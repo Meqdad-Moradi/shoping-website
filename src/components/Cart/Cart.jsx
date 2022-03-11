@@ -8,10 +8,17 @@ const Cart = () => {
    const context = useContext(webContext);
 
    const handleQty = async (e, id) => {
+      const itemQty = e.target.value;
+      let newPrice = 0;
+
+      setQty(itemQty);
+
       context.setCartData(
          context.cartData.map((item) => {
+            newPrice = item.price * item.qty;
+
             if (item.id === id) {
-               return { ...item, price: item.price * qty };
+               return { ...item, qty, price: newPrice };
             } else {
                return item;
             }
@@ -26,7 +33,6 @@ const Cart = () => {
       //    body: JSON.stringify(newItem),
       // });
    };
-   console.log(typeof qty);
 
    return (
       <div className="cart">
@@ -84,12 +90,7 @@ const Cart = () => {
                                       <select
                                          name="amount"
                                          id="amount"
-                                         onChange={(e) => {
-                                            setQty(
-                                               Number(e.currentTarget.value)
-                                            );
-                                            handleQty(e, id);
-                                         }}
+                                         onChange={(e) => handleQty(e, id)}
                                       >
                                          <option value="0">0 Delete</option>
                                          <option value="1" selected>

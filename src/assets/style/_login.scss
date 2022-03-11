@@ -1,0 +1,77 @@
+#login-page {
+   .container {
+      @include flex(column, center);
+      min-height: 65vh;
+   }
+
+   .login-content {
+      @include flex(column, center);
+      background-color: $dark;
+      text-align: center;
+      max-width: 500px;
+      padding: 2em;
+      border-radius: $border-radius;
+      box-shadow: $shadow;
+
+      .main-title > * {
+         color: $light;
+      }
+
+      a {
+         color: $light;
+         display: block;
+         margin-top: 1em;
+         text-align: left;
+      }
+   }
+
+   .form-control {
+      position: relative;
+
+      & + .form-control {
+         margin-top: 1em;
+      }
+
+      form {
+         @include flex(column, center);
+      }
+
+      input {
+         width: 100%;
+         padding: 0.4em 1em;
+         border: 1px solid $gray;
+         border-radius: $border-radius;
+         color: $light;
+         background-color: inherit;
+         outline: 0;
+         transition: $transition;
+         transition-duration: 0.1s;
+
+         &:focus {
+            // box-shadow: 0 0 10px rgb(66, 192, 235);
+            outline: 3px solid rgba(66, 193, 235, 0.7);
+            // outline-offset: 1px;
+         }
+      }
+
+      label {
+         position: absolute;
+         top: 50%;
+         left: 1em;
+         transform: translateY(-50%);
+         padding: 0 0.2em;
+         color: $gray;
+         transition: $transition;
+         transition-duration: 0.2s;
+         cursor: text;
+      }
+
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
+         top: 0;
+         left: 0.5em;
+         font-size: 14px;
+         background-color: $dark;
+      }
+   }
+}

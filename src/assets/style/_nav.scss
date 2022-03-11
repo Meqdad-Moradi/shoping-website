@@ -4,7 +4,19 @@
       @include flex();
       gap: 3em;
 
-      
+      .login-btn {
+         a {
+            display: inline-block;
+            background-color: $dark;
+            padding: 0.2em 1em;
+            border-radius: $border-radius;
+            color: $white !important;
+
+            &.active {
+               background-color: $primary;
+            }
+         }
+      }
 
       .cart-btn {
          position: relative;

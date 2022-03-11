@@ -80,6 +80,8 @@ footer {
    text-transform: capitalize;
    cursor: pointer;
    user-select: none;
+   outline: none;
+   border: none;
    background-color: $primary;
    color: $white;
    border-radius: $border-radius;
@@ -88,7 +90,7 @@ footer {
    &:hover {
       background-color: $black;
       box-shadow: 5px 5px 0.5em -0.1em $primary;
-      transform: translateY(-5px);
+      transform: translateY(-3px);
    }
 
    &:active {
