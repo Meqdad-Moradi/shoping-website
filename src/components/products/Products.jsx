@@ -27,12 +27,12 @@ const Products = () => {
 
                <div className="product-content">
                   {context.products.map((item, i) => {
-                     const { prdName, rate, img, price } = item;
+                     const { prdName, rate, img, price, id } = item;
                      return (
                         <div
                            key={i}
                            className="product-list-item"
-                           onClick={() => context.onAdd(item.id)}
+                           onClick={() => context.onAdd(id)}
                         >
                            <Card
                               img={img}
@@ -41,6 +41,8 @@ const Products = () => {
                               price={price}
                               btnTo=""
                               btnText="show product"
+                              onclick={context.onAdd}
+                              id={id}
                            />
                         </div>
                      );

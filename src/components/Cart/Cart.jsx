@@ -1,10 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import webContext from "../../context/Context";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
 
 const Cart = () => {
+   const [qty, setQty] = useState(1);
    const context = useContext(webContext);
+
+   const handleQty = async (e, id) => {
+      context.setCartData(
+         context.cartData.map((item) => {
+            if (item.id === id) {
+               return { ...item, price: item.price * qty };
+            } else {
+               return item;
+            }
+         })
+      );
+
+      // const res = await fetch("http://localhost:8000/cart", {
+      //    method: "PUT",
+      //    headers: {
+      //       "content-type": "application/json",
+      //    },
+      //    body: JSON.stringify(newItem),
+      // });
+   };
+   console.log(typeof qty);
 
    return (
       <div className="cart">
@@ -22,11 +44,14 @@ const Cart = () => {
                      : context.cartData.map((item) => {
                           const {
                              id,
-                             prjName,
-                             img,
-                             color,
-                             price,
+                             prdName,
                              configuration,
+                             price,
+                             rate,
+                             //   disc,
+                             color,
+                             //   info,
+                             img,
                           } = item;
 
                           return (
@@ -36,7 +61,16 @@ const Cart = () => {
                                 </div>
 
                                 <article className="article-details">
-                                   <h2>{prjName}</h2>
+                                   <h2>{prdName}</h2>
+                                   <div className="item-rate">
+                                      {Array(rate)
+                                         .fill("")
+                                         .map((_, rateIndex) => {
+                                            return (
+                                               <span key={rateIndex}>⭐</span>
+                                            );
+                                         })}
+                                   </div>
                                    <p className="colo">
                                       <strong>color: </strong>
                                       {color}
@@ -47,9 +81,20 @@ const Cart = () => {
                                    </p>
 
                                    <div className="article-details-footer">
-                                      <select name="amount" id="amount">
-                                         <option value="0">0 delete</option>
-                                         <option defaultValue="1">1</option>
+                                      <select
+                                         name="amount"
+                                         id="amount"
+                                         onChange={(e) => {
+                                            setQty(
+                                               Number(e.currentTarget.value)
+                                            );
+                                            handleQty(e, id);
+                                         }}
+                                      >
+                                         <option value="0">0 Delete</option>
+                                         <option value="1" selected>
+                                            1
+                                         </option>
                                          <option value="2">2</option>
                                          <option value="3">3</option>
                                          <option value="4">4</option>

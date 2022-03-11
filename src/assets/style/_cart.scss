@@ -9,7 +9,7 @@
 .cart-page {
    margin-top: 2em;
    margin-bottom: 2em;
-
+   
    .cart-content {
       background-color: $white;
       padding: 2em;
@@ -69,6 +69,13 @@
             margin-right: 5px;
          }
 
+         .item-rate {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1em;
+            font-size: .8rem;
+         }
+
          .article-details-footer {
             @include flex();
             gap: 1em;
@@ -82,6 +89,14 @@
                color: $dark;
                cursor: pointer;
                user-select: none;
+               font-size: 0.89rem;
+               color: $secondary;
+               transition: $transition;
+
+               &:hover {
+                  color: $primary;
+                  text-decoration: underline;
+               }
             }
 
             span {

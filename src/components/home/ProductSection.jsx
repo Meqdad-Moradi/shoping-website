@@ -80,7 +80,11 @@ const ProductSection = () => {
                   {context.products.map((item, i) => {
                      const { prdName, rate, img, price } = item;
                      return (
-                        <div key={i} className="product-list-item">
+                        <div
+                           key={i}
+                           className="product-list-item"
+                           onClick={() => context.onAddSingleProduct(item.id)}
+                        >
                            <Card
                               img={img}
                               prdName={prdName}

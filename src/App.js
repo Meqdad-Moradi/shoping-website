@@ -10,6 +10,7 @@ import webContext from "./context/Context";
 function App() {
    const [products, setProducts] = useState([]);
    const [cartData, setCartData] = useState([]);
+   const [productDetails, setProductDetails] = useState([]);
 
    // get product data from database
    const getDate = async () => {
@@ -32,16 +33,26 @@ function App() {
          console.error(error);
       }
    };
+
+   // get product detials data from database
+   const getDetailsData = async () => {
+      try {
+         const res = await fetch("http://localhost:8000/detailsPage");
+         const data = await res.json();
+         setProductDetails(data);
+      } catch (error) {}
+   };
    useEffect(() => {
       getCartData();
       getDate();
+      // getDetailsData();
    }, []);
 
    // ADD ITEM TO CART
    const handleAdd = async (id) => {
       const newItem = products.find((item) => item.id === id);
 
-      const res = await fetch("http://localhost:8000/cart", {
+      await fetch("http://localhost:8000/cart", {
          method: "POST",
          headers: {
             "content-type": "Application/json",
@@ -50,6 +61,19 @@ function App() {
       });
 
       setCartData([...cartData, newItem]);
+   };
+
+   // ADD ITEM TO PRODUCT DETAILS PAGE
+   const addSingleProduct = async (id) => {
+      const newItem = products.find((item) => item.id === id);
+      // await fetch("http://localhost:8000/detailsPage", {
+      //    method: "POST",
+      //    headers: {
+      //       "content-type": "Application/json",
+      //    },
+      //    body: JSON.stringify(newItem),
+      // });
+      setProductDetails([newItem]);
    };
 
    // DELTE ITEM FORM CART
@@ -75,8 +99,12 @@ function App() {
                setProducts: setProducts,
                onAdd: handleAdd,
                cartData: cartData,
+               setCartData: setCartData,
                onshow: showSingleProduct,
                onDelete: handleDelete,
+               onAddSingleProduct: addSingleProduct,
+               productDetails: productDetails,
+               setProductDetails: setProductDetails,
             }}
          >
             <Routes>

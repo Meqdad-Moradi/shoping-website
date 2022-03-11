@@ -1,5 +1,7 @@
 .single-product {
-   .container {
+   min-height: 80vh;
+
+   .single-product-content {
       @include grid();
       gap: 3em;
    }
@@ -25,6 +27,11 @@
       .price {
          color: $primary;
          font-weight: 600;
+      }
+
+      .info{
+         margin-top: 1em;
+         list-style-type: initial;
       }
 
       .btn.add-to-cart {
