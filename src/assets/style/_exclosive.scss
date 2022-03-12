@@ -3,7 +3,7 @@
 
    .cxclosive-content {
       @include grid();
-    //   color: $white;
+      gap: 2em;
 
       h4 {
          margin-bottom: 1.5em;

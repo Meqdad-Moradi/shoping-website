@@ -46,7 +46,7 @@ function App() {
    useEffect(() => {
       getCartData();
       getDate();
-      // getDetailsData();
+      getDetailsData();
    }, []);
 
    // ADD ITEM TO CART
@@ -67,13 +67,6 @@ function App() {
    // ADD ITEM TO PRODUCT DETAILS PAGE
    const addSingleProduct = async (id) => {
       const newItem = products.find((item) => item.id === id);
-      // await fetch("http://localhost:8000/detailsPage", {
-      //    method: "POST",
-      //    headers: {
-      //       "content-type": "Application/json",
-      //    },
-      //    body: JSON.stringify(newItem),
-      // });
       setProductDetails([newItem]);
    };
 

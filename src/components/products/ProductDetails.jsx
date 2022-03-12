@@ -38,6 +38,8 @@ const ProductDetails = () => {
                                       })}
                                    </ul>
 
+                                   <p className="disc">{item.disc}</p>
+
                                    <button
                                       className="btn add-to-cart"
                                       onClick={() => context.onAdd(item.id)}

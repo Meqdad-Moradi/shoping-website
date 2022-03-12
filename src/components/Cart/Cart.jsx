@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 import webContext from "../../context/Context";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
@@ -7,31 +8,52 @@ const Cart = () => {
    const [qty, setQty] = useState(1);
    const context = useContext(webContext);
 
+   // UPDATE ITEM'S PRICE
    const handleQty = async (e, id) => {
-      const itemQty = e.target.value;
+      const itemQty = Number(e.target.value);
       let newPrice = 0;
+      const item = context.cartData.find((item) => item.id === id);
 
-      setQty(itemQty);
+      newPrice += itemQty * item.basePrice;
+      const newItem = { ...item, qty: itemQty, price: newPrice };
 
       context.setCartData(
          context.cartData.map((item) => {
-            newPrice = item.price * item.qty;
-
             if (item.id === id) {
-               return { ...item, qty, price: newPrice };
+               return {
+                  ...item,
+                  qty: itemQty,
+                  price: item.basePrice * itemQty,
+               };
             } else {
                return item;
             }
          })
       );
 
-      // const res = await fetch("http://localhost:8000/cart", {
-      //    method: "PUT",
-      //    headers: {
-      //       "content-type": "application/json",
-      //    },
-      //    body: JSON.stringify(newItem),
-      // });
+      // update price and qty
+      const res = await fetch(`http://localhost:8000/cart/${id}`, {
+         method: "PUT",
+         headers: {
+            Accept: "application/json",
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(newItem),
+      });
+
+      const data = await res.json();
+      setQty(data.qty);
+
+      // if qty is 0 then delete item from cart
+      if (data.qty === 0) {
+         await fetch(`http://localhost:8000/cart/${id}`, {
+            method: "DELETE",
+         });
+         const filteredItems = context.cartData.filter(
+            (item) => item.id !== id
+         );
+         context.setCartData(filteredItems);
+      }
    };
 
    return (
@@ -52,11 +74,11 @@ const Cart = () => {
                              id,
                              prdName,
                              configuration,
-                             price,
+                             basePrice,
                              rate,
-                             //   disc,
+                             disc,
                              color,
-                             //   info,
+                             info,
                              img,
                           } = item;
 
@@ -85,15 +107,28 @@ const Cart = () => {
                                       <strong>configuration: </strong>{" "}
                                       {configuration}
                                    </p>
+                                   <ul className="item-info">
+                                      {info.map((item, i) => (
+                                         <li key={i}>{item}</li>
+                                      ))}
+                                   </ul>
+                                   <p className="disc">
+                                      {disc}{" "}
+                                      <span>
+                                         Details
+                                         <FaChevronDown />
+                                      </span>
+                                   </p>
 
                                    <div className="article-details-footer">
                                       <select
                                          name="amount"
                                          id="amount"
+                                         //   value={qty}
                                          onChange={(e) => handleQty(e, id)}
                                       >
                                          <option value="0">0 Delete</option>
-                                         <option value="1" selected>
+                                         <option defaultValue="1" selected>
                                             1
                                          </option>
                                          <option value="2">2</option>
@@ -120,7 +155,7 @@ const Cart = () => {
                                 </article>
 
                                 <div className="price-cover">
-                                   <p>$ {price}</p>
+                                   <p>$ {basePrice}</p>
                                 </div>
                              </main>
                           );
@@ -131,14 +166,15 @@ const Cart = () => {
                         Subtotal ( {context.cartData.length}{" "}
                         {context.cartData.length === 1 ||
                         context.cartData.length === 0
-                           ? "item"
-                           : "items"}{" "}
+                           ? "Item"
+                           : "Items"}{" "}
                         ):
                      </p>
                      <h3 className="total-price">
                         <span>$ </span>
                         {context.cartData.reduce((item, value) => {
-                           return item + value.price;
+                           const totalPrice = item + value.price;
+                           return Math.round(totalPrice);
                         }, 0)}
                      </h3>
                   </footer>

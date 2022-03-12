@@ -1,11 +1,9 @@
 .testimonials-content {
-   @include grid();
-   gap: 2.5em;
    margin-top: 2.5em;
    position: relative;
 
-   &:hover{
-      .arrow{
+   &:hover {
+      .arrow {
          opacity: 1;
       }
    }
@@ -17,6 +15,7 @@
       transform: translateY(-50%);
       padding: 0.5em 0.2em;
       background-color: $white;
+      color: $dark;
       outline: 0;
       border: 1px solid $gray;
       cursor: pointer;
@@ -35,8 +34,6 @@
    }
 
    .content {
-      display: flex;
-      gap: 1em !important;
 
       & > div {
          background-color: $light;
@@ -44,9 +41,24 @@
          margin: 0 1em;
       }
 
-      strong,
-      h1 {
-         text-transform: capitalize;
+      .content-body {
+         @include flex();
+         gap: 2em;
+      }
+
+      .content-details {
+         strong,
+         h1 {
+            text-transform: capitalize;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .testimonials-content {
+      .content-body {
+         flex-direction: column !important;
       }
    }
 }

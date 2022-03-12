@@ -36,7 +36,7 @@ const Testimonials = () => {
       <section className="testimonials">
          <div className="container">
             <MainTitle
-               titleText="Our visitore comments"
+               titleText="Testimonials"
                subTitleText="you can see down below what our clients are saying about us and we would appreciate that you share your idea with us."
             />
 
@@ -60,16 +60,24 @@ const Testimonials = () => {
                      .map((_, i) => {
                         return (
                            <div className="content" key={i}>
-                              <div>
-                                 <h1>"hello guys"</h1>
-                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptates nisi mollitia
-                                    enim ipsam fugiat ad!
-                                 </p>
-                                 <p>
-                                    <strong>ali kamali</strong>
-                                 </p>
+                              <div className="content-body">
+                                 <div className="img-box">
+                                    <img
+                                       src="https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFwcHklMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                                       alt="testimonials_image"
+                                    />
+                                 </div>
+                                 <div className="content-details">
+                                    <h1>"hello guys"</h1>
+                                    <p>
+                                       Lorem ipsum dolor sit amet consectetur
+                                       adipisicing elit. Voluptates nisi
+                                       mollitia enim ipsam fugiat ad!
+                                    </p>
+                                    <p>
+                                       <strong>maryam amini</strong>
+                                    </p>
+                                 </div>
                               </div>
                            </div>
                         );

@@ -2,8 +2,9 @@
   "products": [
     {
       "id": 1,
-      "prdName": "product name one",
+      "prdName": "photo camera with white jack",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -20,8 +21,9 @@
     },
     {
       "id": 2,
-      "prdName": "product name two",
+      "prdName": "apple smart watch ser.6 10s ",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -38,8 +40,9 @@
     },
     {
       "id": 3,
-      "prdName": "product name three",
+      "prdName": "headphones with jack 3mm, wired",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 4,
@@ -56,8 +59,9 @@
     },
     {
       "id": 4,
-      "prdName": "product name four",
+      "prdName": "polaroid camera one step 2",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -74,8 +78,9 @@
     },
     {
       "id": 5,
-      "prdName": "product name five",
+      "prdName": "clinique lape stick in multiple colors",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -92,8 +97,9 @@
     },
     {
       "id": 6,
-      "prdName": "product name six",
+      "prdName": "green cactus with green wase",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -110,8 +116,9 @@
     },
     {
       "id": 7,
-      "prdName": "product name seven",
+      "prdName": "N*5 chanel eau de parfum",
       "configuration": "Echo dot",
+      "basePrice": 35.28,
       "price": 35.28,
       "qty": 1,
       "rate": 5,
@@ -127,6 +134,84 @@
       "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
     }
   ],
-  "cart": [],
-  "detailsPage": []
+  "cart": [
+    {
+      "id": 7,
+      "prdName": "N*5 chanel eau de parfum",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "black"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+    },
+    {
+      "id": 5,
+      "prdName": "clinique lape stick in multiple colors",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "red"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
+    },
+    {
+      "id": 6,
+      "prdName": "green cactus with green wase",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "green"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+    }
+  ],
+  "detailsPage": [
+    {
+      "id": 7,
+      "prdName": "N*5 chanel eau de parfum",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "black"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+    }
+  ]
 }

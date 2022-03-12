@@ -14,6 +14,7 @@
       transform: translateY(-50%);
       padding: 0.5em 0.2em;
       background-color: $white;
+      color: $dark;
       outline: 0;
       border: 1px solid $gray;
       cursor: pointer;
@@ -48,7 +49,7 @@
 
    .latest-products-card {
       @include grid($ai: start);
-      gap: 2.5em;
+      gap: 2em;
 
       .card {
          margin: 0;
