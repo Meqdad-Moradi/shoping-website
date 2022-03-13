@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "prdName": "photo camera with white jack",
+      "prdName": "canon camera with white jack",
       "configuration": "Echo dot",
       "basePrice": 35.28,
       "price": 35.28,
@@ -17,7 +17,7 @@
         "Material: Flexible polypropylene film – robust and tear-resistant.",
         "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
       ],
-      "img": "https://images.unsplash.com/photo-1615206671934-7a179459f679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+      "img": "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
     {
       "id": 2,
@@ -55,7 +55,7 @@
         "Material: Flexible polypropylene film – robust and tear-resistant.",
         "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
       ],
-      "img": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+      "img": "https://images.unsplash.com/photo-1620578077783-33e254311182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
     {
       "id": 4,
@@ -74,7 +74,7 @@
         "Material: Flexible polypropylene film – robust and tear-resistant.",
         "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
       ],
-      "img": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
+      "img": "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
     },
     {
       "id": 5,
@@ -116,7 +116,7 @@
     },
     {
       "id": 7,
-      "prdName": "N*5 chanel eau de parfum",
+      "prdName": "N5 chanel eau de parfum",
       "configuration": "Echo dot",
       "basePrice": 35.28,
       "price": 35.28,
@@ -131,14 +131,72 @@
         "Material: Flexible polypropylene film – robust and tear-resistant.",
         "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
       ],
-      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+      "img": "https://images.unsplash.com/photo-1613521076081-2820f9746a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFyZnVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 3,
+      "prdName": "headphones with jack 3mm, wired",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 4,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "black"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1620578077783-33e254311182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 4,
+      "prdName": "polaroid camera one step 2",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "black"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+      "id": 1,
+      "prdName": "canon camera with white jack",
+      "configuration": "Echo dot",
+      "basePrice": 35.28,
+      "price": 35.28,
+      "qty": 1,
+      "rate": 5,
+      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
+      "color": [
+        "black"
+      ],
+      "info": [
+        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
+        "Material: Flexible polypropylene film – robust and tear-resistant.",
+        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
+      ],
+      "img": "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+    }
+  ],
   "detailsPage": [
     {
       "id": 7,
-      "prdName": "N*5 chanel eau de parfum",
+      "prdName": "N5 chanel eau de parfum",
       "configuration": "Echo dot",
       "basePrice": 35.28,
       "price": 35.28,
@@ -153,7 +211,7 @@
         "Material: Flexible polypropylene film – robust and tear-resistant.",
         "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
       ],
-      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+      "img": "https://images.unsplash.com/photo-1613521076081-2820f9746a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFyZnVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     }
   ]
 }

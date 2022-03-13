@@ -49,11 +49,15 @@ const FeaturedSection = () => {
    return (
       <section className="featured-product">
          <div className="container">
-            <MainTitle
-               titleText="featured products"
-               subTitleText="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            />
-            {/* <Link to="/products">see more</Link> */}
+            <div className="main-title">
+               <h1 className="title">featured products</h1>
+               <p className="sub-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
+                  <span className="see-more">
+                     <Link to="/products">see more...</Link>
+                  </span>
+               </p>
+            </div>
 
             <div className="product-list">
                <button

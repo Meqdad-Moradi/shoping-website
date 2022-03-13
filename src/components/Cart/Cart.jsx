@@ -1,12 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import webContext from "../../context/Context";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
+import WishList from "./WishList";
 
 const Cart = () => {
-   const [qty, setQty] = useState(1);
    const context = useContext(webContext);
+   const navigate = useNavigate();
 
    // UPDATE ITEM'S PRICE
    const handleQty = async (e, id) => {
@@ -42,7 +44,6 @@ const Cart = () => {
       });
 
       const data = await res.json();
-      setQty(data.qty);
 
       // if qty is 0 then delete item from cart
       if (data.qty === 0) {
@@ -56,8 +57,13 @@ const Cart = () => {
       }
    };
 
+   const addToWishList = (id) => {
+      const targetItem = context.cartData.find((item) => item.id === id);
+      context.setWishList([...context.wishList, targetItem]);
+   };
+
    return (
-      <div className="cart">
+      <>
          <Header />
          <div className="cart-page">
             <div className="container">
@@ -124,7 +130,6 @@ const Cart = () => {
                                       <select
                                          name="amount"
                                          id="amount"
-                                         //   value={qty}
                                          onChange={(e) => handleQty(e, id)}
                                       >
                                          <option value="0">0 Delete</option>
@@ -148,9 +153,15 @@ const Cart = () => {
                                          delete
                                       </button>{" "}
                                       <span>|</span>
-                                      <button>save for later</button>{" "}
+                                      <button onClick={() => addToWishList(id)}>
+                                         save for later
+                                      </button>{" "}
                                       <span>|</span>
-                                      <button>see like this</button>
+                                      <button
+                                         onClick={() => navigate("/products")}
+                                      >
+                                         see like this
+                                      </button>
                                    </div>
                                 </article>
 
@@ -181,9 +192,10 @@ const Cart = () => {
                </div>
             </div>
          </div>
-
+         {/* wish list */}
+         <WishList />
          <Footer />
-      </div>
+      </>
    );
 };
 

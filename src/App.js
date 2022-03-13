@@ -14,6 +14,7 @@ function App() {
    const [cartData, setCartData] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
    const [productDetails, setProductDetails] = useState([]);
+   const [wishList, setWishList] = useState([]);
 
    // get product data from database
    const getDate = async () => {
@@ -83,11 +84,6 @@ function App() {
       setCartData(newitem);
    };
 
-   // SHOW SINGLE PRODUCT
-   const showSingleProduct = (id) => {
-      console.log(id);
-   };
-
    return (
       <>
          <webContext.Provider
@@ -97,13 +93,14 @@ function App() {
                onAdd: handleAdd,
                cartData: cartData,
                setCartData: setCartData,
-               onshow: showSingleProduct,
                onDelete: handleDelete,
                onAddSingleProduct: addSingleProduct,
                productDetails: productDetails,
                setProductDetails: setProductDetails,
                onLoading: isLoading,
                setLoading: setIsLoading,
+               wishList: wishList,
+               setWishList: setWishList,
             }}
          >
             <Routes>

@@ -1,14 +1,6 @@
-.cart {
-   background-color: $light;
-
-   .header {
-      background-color: $white;
-   }
-}
-
 .cart-page {
-   margin-top: 2em;
-   margin-bottom: 2em;
+   background-color: $light;
+   padding-block: 2em;
 
    .cart-content {
       background-color: $white;

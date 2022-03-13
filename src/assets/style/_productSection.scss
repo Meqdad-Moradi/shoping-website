@@ -1,5 +1,9 @@
 .featured-product {
    background: $light;
+
+   .see-more a{
+      color: $primary;
+   }
 }
 
 .product-list {
@@ -47,7 +51,7 @@
    .card img {
       height: 100%;
       object-fit: cover;
-      aspect-ratio: 1 / .8;
+      aspect-ratio: 1 / 0.8;
    }
 }
 

@@ -1,0 +1,20 @@
+.wish-list {
+   .wish-list-body {
+       @include flex(column, start, start);
+       gap: 2em;
+   }
+
+   .saved-items {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 25% auto 10%;
+      grid-auto-flow: dense;
+   }
+
+   .img-box{
+       img{
+           aspect-ratio: 1 / 1.2;
+           object-fit: cover;
+       }
+   }
+}

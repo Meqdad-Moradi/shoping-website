@@ -482,6 +482,9 @@ footer {
 .featured-product {
   background: whitesmoke;
 }
+.featured-product .see-more a {
+  color: #cc3858;
+}
 
 .product-list {
   position: relative;
@@ -777,16 +780,9 @@ footer {
   min-height: 100vh;
 }
 
-.cart {
-  background-color: whitesmoke;
-}
-.cart .header {
-  background-color: white;
-}
-
 .cart-page {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  background-color: whitesmoke;
+  padding-block: 2em;
 }
 .cart-page .cart-content {
   background-color: white;
@@ -929,6 +925,26 @@ footer {
 .cart-page .cart-footer h3 {
   font-weight: 600;
   line-height: 1;
+}
+
+.wish-list .wish-list-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2em;
+}
+.wish-list .saved-items {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 25% auto 10%;
+  grid-auto-flow: dense;
+}
+.wish-list .img-box img {
+  aspect-ratio: 1/1.2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .notfound {
