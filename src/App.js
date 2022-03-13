@@ -55,17 +55,20 @@ function App() {
 
    // ADD ITEM TO CART
    const handleAdd = async (id) => {
-      const newItem = products.find((item) => item.id === id);
+      const tartgetItem = products.find((item) => item.id === id);
 
-      await fetch("http://localhost:8000/cart", {
-         method: "POST",
-         headers: {
-            "content-type": "Application/json",
-         },
-         body: JSON.stringify(newItem),
-      });
-
-      setCartData([...cartData, newItem]);
+      if (!cartData.includes(tartgetItem)) {
+         setCartData([...cartData, tartgetItem]);
+         await fetch("http://localhost:8000/cart", {
+            method: "POST",
+            headers: {
+               "content-type": "Application/json",
+            },
+            body: JSON.stringify(tartgetItem),
+         });
+      } else {
+         return false;
+      }
    };
 
    // ADD ITEM TO PRODUCT DETAILS PAGE

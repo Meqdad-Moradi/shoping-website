@@ -804,9 +804,6 @@ footer {
   padding-block: 2em;
   border-top: 1px solid #e4e5e7;
 }
-.cart-page .cart-main:last-of-type {
-  border-bottom: 1px solid #e4e5e7;
-}
 .cart-page .cart-main .img-box {
   order: -1;
   min-height: 15em;
@@ -914,6 +911,7 @@ footer {
   padding-top: 1.5em;
   margin-left: auto;
   display: flex;
+  border-top: 1px solid #e4e5e7;
 }
 .cart-page .cart-footer p {
   margin-left: auto;

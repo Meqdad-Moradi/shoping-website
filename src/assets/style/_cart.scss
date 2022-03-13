@@ -20,10 +20,6 @@
       padding-block: 2em;
       border-top: 1px solid $gray;
 
-      &:last-of-type {
-         border-bottom: 1px solid $gray;
-      }
-
       .img-box {
          order: -1;
          min-height: 15em;
@@ -136,6 +132,7 @@
       padding-top: 1.5em;
       margin-left: auto;
       display: flex;
+      border-top: 1px solid $gray;
 
       p {
          margin-left: auto;

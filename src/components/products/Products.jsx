@@ -9,7 +9,6 @@ import MainTitle from "../global/MainTitle";
 
 const Products = () => {
    const context = useContext(webContext);
-
    return (
       <>
          <Header />

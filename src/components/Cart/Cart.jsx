@@ -59,7 +59,12 @@ const Cart = () => {
 
    const addToWishList = (id) => {
       const targetItem = context.cartData.find((item) => item.id === id);
-      context.setWishList([...context.wishList, targetItem]);
+
+      if (!context.wishList.includes(targetItem)) {
+         context.setWishList([...context.wishList, targetItem]);
+      } else {
+         return false;
+      }
    };
 
    return (
