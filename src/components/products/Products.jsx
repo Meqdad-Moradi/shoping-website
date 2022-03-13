@@ -27,27 +27,31 @@ const Products = () => {
                </div>
 
                <div className="product-content">
-                  {context.products.map((item, i) => {
-                     const { prdName, rate, img, price, id } = item;
-                     return (
-                        <div key={i} className="product-list-item">
-                           <div className="card">
-                              <ImageBox image={img} />
-                              <CardContent
-                                 prdName={prdName}
-                                 price={price}
-                                 rate={rate}
-                              />
-                              <Button
-                                 btnText="add to cart"
-                                 to=""
-                                 onclick={context.onAdd}
-                                 id={id}
-                              />
+                  {context.onLoading ? (
+                     <h1 className="loading">Loading...</h1>
+                  ) : (
+                     context.products.map((item, i) => {
+                        const { prdName, rate, img, price, id } = item;
+                        return (
+                           <div key={i} className="product-list-item">
+                              <div className="card">
+                                 <ImageBox image={img} />
+                                 <CardContent
+                                    prdName={prdName}
+                                    price={price}
+                                    rate={rate}
+                                 />
+                                 <Button
+                                    btnText="add to cart"
+                                    to=""
+                                    onclick={context.onAdd}
+                                    id={id}
+                                 />
+                              </div>
                            </div>
-                        </div>
-                     );
-                  })}
+                        );
+                     })
+                  )}
                </div>
             </div>
          </section>

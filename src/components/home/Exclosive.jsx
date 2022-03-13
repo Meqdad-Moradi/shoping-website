@@ -17,7 +17,7 @@ const Cta = () => {
                      titleText="smart brand"
                      subTitleText="Repellat doloribus deserunt voluptatum praesentium, incidunt fugiat."
                   />
-                  <Button to="/singleProduct" btnText="buy now" />
+                  <Button to="/products" btnText="buy now" />
                </div>
             </div>
          </div>
