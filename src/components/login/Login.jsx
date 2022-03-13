@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
 import MainTitle from "../global/MainTitle";
@@ -7,6 +7,7 @@ import MainTitle from "../global/MainTitle";
 const Login = () => {
    const [name, setName] = useState("");
    const [password, setPassword] = useState("");
+   const navigate = useNavigate();
 
    // check user name and password when user want to log in
    const onLogin = (e) => {
@@ -14,6 +15,8 @@ const Login = () => {
 
       if (name === "" || password === "") {
          alert("Username or password missing!");
+      } else {
+         navigate("/dashboard", { state: name });
       }
 
       setName("");

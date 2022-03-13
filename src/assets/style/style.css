@@ -773,6 +773,10 @@ footer {
   width: 100%;
 }
 
+.dashboard {
+  min-height: 100vh;
+}
+
 .cart {
   background-color: whitesmoke;
 }
