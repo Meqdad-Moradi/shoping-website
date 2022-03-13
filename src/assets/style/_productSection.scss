@@ -1,11 +1,9 @@
+.featured-product {
+   background: $light;
+}
+
 .product-list {
    position: relative;
-
-   &:hover {
-      .arrow {
-         opacity: 1;
-      }
-   }
 
    .arrow {
       position: absolute;
@@ -20,15 +18,20 @@
       cursor: pointer;
       display: grid;
       place-content: center;
-      opacity: 0;
       transition: $transition;
 
       &.left {
          left: 0;
+         &:hover {
+            color: $primary;
+         }
       }
 
       &.right {
          right: 0;
+         &:hover {
+            color: $primary;
+         }
       }
    }
 }
@@ -37,23 +40,24 @@
    margin: 0;
    padding: 0;
 
+   .card {
+      margin: 0 0.5em;
+   }
+
    .card img {
       height: 100%;
       object-fit: cover;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1 / .8;
    }
 }
 
 .latest-products {
-   margin-top: 2em;
-
    .latest-products-card {
       @include grid($ai: start);
       gap: 2em;
 
       .card {
          margin: 0;
-         box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
 
          &:hover {
             transform: translateY(-5px);

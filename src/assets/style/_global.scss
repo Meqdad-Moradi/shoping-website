@@ -70,7 +70,7 @@ select {
 section,
 main,
 footer {
-   padding-block: 4em;
+   padding-block: 3em;
 }
 
 .btn {
@@ -89,7 +89,7 @@ footer {
 
    &:hover {
       background-color: $black;
-      box-shadow: 5px 5px .5em -0.2em $primary;
+      box-shadow: 5px 5px 0.5em -0.2em $primary;
       transform: translateY(-3px);
    }
 
@@ -111,6 +111,12 @@ footer {
 .main-title {
    margin-bottom: 2em;
    // text-align: center;
+}
+
+.loading {
+   font-size: 1.5rem;
+   color: $primary;
+   text-align: center;
 }
 
 .container {

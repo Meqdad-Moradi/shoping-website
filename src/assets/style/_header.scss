@@ -1,7 +1,10 @@
 .header {
    height: 70px;
    box-shadow: 0 5px 5px -6px rgba(0, 0, 0, 0.2);
-   position: relative;
+   background-color: $white;
+   position: sticky;
+   top: 0;
+   width: 100%;
    z-index: 9999;
 
    .container {

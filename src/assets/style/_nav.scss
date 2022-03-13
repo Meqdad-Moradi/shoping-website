@@ -49,3 +49,11 @@
       }
    }
 }
+
+@media (max-width: 768px) {
+   .nav {
+      .login-btn {
+         width: initial !important;
+      }
+   }
+}

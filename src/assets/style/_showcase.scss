@@ -74,13 +74,13 @@
             font-size: 1.125rem;
             opacity: 0;
             transform: translateY(30px);
-            animation: anim 0.5s ease-in-out forwards 0.5s;
+            animation: anim 0.5s ease-in-out forwards 0.3s;
          }
 
          .btn {
             opacity: 0;
             transform: translateY(30px);
-            animation: anim 0.5s ease-in-out forwards 1s;
+            animation: anim 0.5s ease-in-out forwards .7s;
          }
       }
    }

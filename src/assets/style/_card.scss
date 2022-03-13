@@ -1,7 +1,6 @@
 .card {
    @include flex(column, start, start);
    background-color: $light;
-   margin: 0 0.5em;
    border-radius: $border-radius;
    overflow: hidden;
    transition: $transition;
@@ -11,7 +10,7 @@
          transform: scale(1.1);
       }
    }
-   
+
    .img-box {
       overflow: hidden;
 
@@ -21,14 +20,12 @@
    }
 
    .content {
-      padding: 1em;
-
-      p {
-         margin: 0;
-      }
+      padding: 1em 1em 0 1em;
 
       .title {
          font-size: 1.25rem;
+         margin-bottom: .5em;
+         line-height: 1.5;
       }
 
       .rate {
@@ -43,5 +40,9 @@
             margin-right: 0.2em;
          }
       }
+   }
+
+   .btn {
+      margin: 1.5em 1em 1em 1em;
    }
 }

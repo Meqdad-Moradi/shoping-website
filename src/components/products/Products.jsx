@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import webContext from "../../context/Context";
-import Card from "../global/Card";
+import Button from "../global/Button";
+import CardContent from "../global/CardContent";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
+import ImageBox from "../global/ImageBox";
 import MainTitle from "../global/MainTitle";
 
 const Products = () => {
@@ -16,7 +18,7 @@ const Products = () => {
             <div className="container">
                <div className="banner">
                   <img
-                     src="https://images.unsplash.com/photo-1604759695540-3012f9682c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+                     src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
                      alt="banner"
                   />
                   <MainTitle
@@ -29,21 +31,21 @@ const Products = () => {
                   {context.products.map((item, i) => {
                      const { prdName, rate, img, price, id } = item;
                      return (
-                        <div
-                           key={i}
-                           className="product-list-item"
-                           onClick={() => context.onAdd(id)}
-                        >
-                           <Card
-                              img={img}
-                              prdName={prdName}
-                              rate={rate}
-                              price={price}
-                              btnTo=""
-                              btnText="show product"
-                              onclick={context.onAdd}
-                              id={id}
-                           />
+                        <div key={i} className="product-list-item">
+                           <div className="card">
+                              <ImageBox image={img} />
+                              <CardContent
+                                 prdName={prdName}
+                                 price={price}
+                                 rate={rate}
+                              />
+                              <Button
+                                 btnText="add to cart"
+                                 to=""
+                                 onclick={context.onAdd}
+                                 id={id}
+                              />
+                           </div>
                         </div>
                      );
                   })}

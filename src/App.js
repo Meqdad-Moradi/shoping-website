@@ -11,6 +11,7 @@ import webContext from "./context/Context";
 function App() {
    const [products, setProducts] = useState([]);
    const [cartData, setCartData] = useState([]);
+   const [isLoading, setIsLoading] = useState(true);
    const [productDetails, setProductDetails] = useState([]);
 
    // get product data from database
@@ -19,6 +20,7 @@ function App() {
          const res = await fetch("http://localhost:8000/products");
          const data = await res.json();
          setProducts(data);
+         setIsLoading(false);
       } catch (error) {
          console.error(error);
       }
@@ -99,6 +101,8 @@ function App() {
                onAddSingleProduct: addSingleProduct,
                productDetails: productDetails,
                setProductDetails: setProductDetails,
+               onLoading: isLoading,
+               setLoading: setIsLoading,
             }}
          >
             <Routes>

@@ -93,6 +93,9 @@
                svg {
                   padding-top: 5px;
                }
+               &:hover {
+                  text-decoration: underline;
+               }
             }
          }
 
