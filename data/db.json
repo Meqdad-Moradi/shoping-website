@@ -134,27 +134,7 @@
       "img": "https://images.unsplash.com/photo-1613521076081-2820f9746a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFyZnVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     }
   ],
-  "cart": [
-    {
-      "id": 3,
-      "prdName": "headphones with jack 3mm, wired",
-      "configuration": "Echo dot",
-      "basePrice": 35.28,
-      "price": 35.28,
-      "qty": 1,
-      "rate": 4,
-      "disc": "Prices for items sold by Shopping-website include VAT. Depending on your delivery address, VAT may vary at Checkout. For other items, please see",
-      "color": [
-        "black"
-      ],
-      "info": [
-        "Outer dimensions when open: approx. 222 x 113 mm. Inner dimensions when open: 210 mm x 105 mm.",
-        "Material: Flexible polypropylene film – robust and tear-resistant.",
-        "Also suitable for: ID, ID card, credit card, monthly or annual public transport tickets or car papers for registration (registration certificate)."
-      ],
-      "img": "https://images.unsplash.com/photo-1620578077783-33e254311182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-    }
-  ],
+  "cart": [],
   "detailsPage": [
     {
       "id": 7,

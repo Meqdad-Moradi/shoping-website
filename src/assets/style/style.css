@@ -740,6 +740,13 @@ footer {
   align-items: center;
 }
 
+#login-page .dialog {
+  margin-bottom: 1em;
+}
+#login-page .dialog p {
+  color: #cc3858;
+  margin-top: 0;
+}
 #login-page .container {
   display: flex;
   flex-direction: column;

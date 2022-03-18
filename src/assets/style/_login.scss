@@ -1,4 +1,15 @@
 #login-page {
+   // position: relative;
+
+   .dialog {
+      margin-bottom: 1em;
+
+      p {
+         color: $primary;
+         margin-top: 0;
+      }
+   }
+
    .container {
       @include flex(column, center);
       min-height: 65vh;
@@ -26,7 +37,7 @@
             margin-top: 1em;
          }
 
-         .btn{
+         .btn {
             width: 100%;
          }
       }
