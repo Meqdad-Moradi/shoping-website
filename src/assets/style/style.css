@@ -229,49 +229,51 @@ footer {
 .form-control + .form-control {
   margin-top: 1em;
 }
-.form-control input {
+.form-control .input {
   width: 100%;
   padding: 0.4em 1em;
-  border: 1px solid #e4e5e7;
+  border: 1px solid #303236;
   border-radius: 0.3em;
-  color: whitesmoke;
+  color: #303236;
   background-color: inherit;
   outline: 0;
   transition: all 0.4s ease-in-out;
   transition-duration: 0.1s;
 }
-.form-control input:focus {
-  outline: 3px solid #d96c84;
+.form-control .input:focus {
+  outline: 3px solid #66a4d6;
 }
 .form-control label {
   position: absolute;
   top: 50%;
   left: 1em;
   transform: translateY(-50%);
-  padding: 0 0.2em;
-  color: #e4e5e7;
+  color: #303236;
   transition: all 0.4s ease-in-out;
   transition-duration: 0.2s;
   cursor: text;
 }
-.form-control input:not(:-moz-placeholder-shown) ~ label {
+.form-control .input:not(:-moz-placeholder-shown) ~ label {
   top: 0;
   left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
+  font-size: 12px;
+  background-color: whitesmoke;
+  padding: 0 0.4em;
 }
-.form-control input:not(:-ms-input-placeholder) ~ label {
+.form-control .input:not(:-ms-input-placeholder) ~ label {
   top: 0;
   left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
+  font-size: 12px;
+  background-color: whitesmoke;
+  padding: 0 0.4em;
 }
-.form-control input:focus ~ label,
-.form-control input:not(:placeholder-shown) ~ label {
+.form-control .input:focus ~ label,
+.form-control .input:not(:placeholder-shown) ~ label {
   top: 0;
   left: 0.5em;
-  font-size: 14px;
-  background-color: #303236;
+  font-size: 12px;
+  background-color: whitesmoke;
+  padding: 0 0.4em;
 }
 
 .header {
@@ -689,6 +691,40 @@ footer {
   padding-top: 4em;
 }
 
+.contact-page {
+  margin-bottom: 2em;
+}
+.contact-page .contat-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-auto-flow: dense;
+  justify-content: space-between;
+  align-items: center;
+  align-items: start;
+  gap: 2em;
+}
+.contact-page .contact-form-container {
+  background-color: whitesmoke;
+  padding: 2em;
+  border-radius: 0.3em;
+}
+.contact-page .contact-form-container .message textarea#message {
+  resize: none;
+}
+.contact-page .contact-form-container .message label {
+  top: 1.3em;
+}
+.contact-page .contact-form-container .message textarea.input:not(:-moz-placeholder-shown) ~ label {
+  top: 0;
+}
+.contact-page .contact-form-container .message textarea.input:not(:-ms-input-placeholder) ~ label {
+  top: 0;
+}
+.contact-page .contact-form-container .message textarea.input:focus ~ label,
+.contact-page .contact-form-container .message textarea.input:not(:placeholder-shown) ~ label {
+  top: 0;
+}
+
 .single-product {
   min-height: 80vh;
 }
@@ -773,6 +809,22 @@ footer {
 }
 #login-page .login-content form {
   width: 100%;
+}
+#login-page .login-content form .input {
+  border-color: #e4e5e7;
+}
+#login-page .login-content form label {
+  color: #e4e5e7;
+}
+#login-page .login-content form .input:not(:-moz-placeholder-shown) ~ label {
+  background-color: #303236;
+}
+#login-page .login-content form .input:not(:-ms-input-placeholder) ~ label {
+  background-color: #303236;
+}
+#login-page .login-content form .input:focus ~ label,
+#login-page .login-content form .input:not(:placeholder-shown) ~ label {
+  background-color: #303236;
 }
 #login-page .login-content form a {
   color: whitesmoke;

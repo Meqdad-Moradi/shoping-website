@@ -31,6 +31,19 @@
       form {
          width: 100%;
 
+         .input {
+            border-color: $gray;
+         }
+
+         label {
+            color: $gray;
+         }
+
+         .input:focus ~ label,
+         .input:not(:placeholder-shown) ~ label {
+            background-color: $dark;
+         }
+
          a {
             color: $light;
             display: inline-block;

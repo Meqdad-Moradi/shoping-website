@@ -1,0 +1,30 @@
+.contact-page {
+   margin-bottom: 2em;
+
+   .contat-body {
+      @include grid();
+      align-items: start;
+      gap: 2em;
+   }
+
+   .contact-form-container {
+      background-color: $light;
+      padding: 2em;
+      border-radius: $border-radius;
+
+      .message {
+         textarea#message {
+            resize: none;
+         }
+
+         label {
+            top: 1.3em;
+         }
+
+         textarea.input:focus ~ label,
+         textarea.input:not(:placeholder-shown) ~ label {
+            top: 0;
+         }
+      }
+   }
+}

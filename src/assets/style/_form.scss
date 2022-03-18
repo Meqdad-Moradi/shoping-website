@@ -5,19 +5,19 @@
       margin-top: 1em;
    }
 
-   input {
+   .input {
       width: 100%;
       padding: 0.4em 1em;
-      border: 1px solid $gray;
+      border: 1px solid $dark;
       border-radius: $border-radius;
-      color: $light;
+      color: $dark;
       background-color: inherit;
       outline: 0;
       transition: $transition;
       transition-duration: 0.1s;
 
       &:focus {
-         outline: 3px solid hsl(347, 59%, 51% /0.8);
+         outline: 3px solid $blue;
       }
    }
 
@@ -26,18 +26,18 @@
       top: 50%;
       left: 1em;
       transform: translateY(-50%);
-      padding: 0 0.2em;
-      color: $gray;
+      color: $dark;
       transition: $transition;
       transition-duration: 0.2s;
       cursor: text;
    }
 
-   input:focus ~ label,
-   input:not(:placeholder-shown) ~ label {
+   .input:focus ~ label,
+   .input:not(:placeholder-shown) ~ label {
       top: 0;
       left: 0.5em;
-      font-size: 14px;
-      background-color: $dark;
+      font-size: 12px;
+      background-color: $light;
+      padding: 0 0.4em;
    }
 }

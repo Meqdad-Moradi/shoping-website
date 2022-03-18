@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../global/Footer";
 import Header from "../global/Header";
+import Input from "../global/Input";
 import MainTitle from "../global/MainTitle";
 import Popup from "./Popup";
 
 const Login = () => {
    const [name, setName] = useState("");
    const [password, setPassword] = useState("");
-   const [succed, setSucced] = useState(false);
+   const [nosucced, setNoSucced] = useState(false);
    const [check, setCheck] = useState("");
    const navigate = useNavigate();
 
@@ -17,11 +18,11 @@ const Login = () => {
       e.preventDefault();
 
       if (name === "") {
-         setSucced(true);
+         setNoSucced(true);
          setCheck("Please insert your Username!");
          return;
       } else if (password === "") {
-         setSucced(true);
+         setNoSucced(true);
          setCheck("Please insert your Password!");
          return;
       } else {
@@ -37,7 +38,7 @@ const Login = () => {
          <Header />
          <section id="login-page">
             <div className="container">
-               {succed ? <Popup check={check} /> : ""}
+               {nosucced ? <Popup check={check} /> : null}
                <div className="login-content">
                   <MainTitle
                      titleText="Login"
@@ -45,28 +46,20 @@ const Login = () => {
                   />
 
                   <form action="POST" onSubmit={onLogin}>
-                     <div className="form-control">
-                        <input
-                           type="text"
-                           id="name"
-                           value={name}
-                           autoComplete="off"
-                           placeholder=" "
-                           onChange={(e) => setName(e.currentTarget.value)}
-                        />
-                        <label htmlFor="name">User name</label>
-                     </div>
-                     <div className="form-control">
-                        <input
-                           type="password"
-                           id="password"
-                           value={password}
-                           autoComplete="off"
-                           placeholder=" "
-                           onChange={(e) => setPassword(e.currentTarget.value)}
-                        />
-                        <label htmlFor="password">Password</label>
-                     </div>
+                     <Input
+                        name="name"
+                        setValue={setName}
+                        type="name"
+                        label="user name"
+                        value={name}
+                     />
+                     <Input
+                        name="password"
+                        setValue={setPassword}
+                        type="password"
+                        label="password"
+                        value={password}
+                     />
 
                      <Link to="">forgot your password?</Link>
 

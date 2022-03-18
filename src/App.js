@@ -8,6 +8,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import ProductDetails from "./components/products/ProductDetails";
 import Products from "./components/products/Products";
 import webContext from "./context/Context";
+import Contact from "./components/contact/Contact";
 
 function App() {
    const [products, setProducts] = useState([]);
@@ -110,6 +111,7 @@ function App() {
                <Route path="/home" element={<Navigate to="/" />} />
                <Route path="/" element={<Home />} />
                <Route path="/products" element={<Products />} />
+               <Route path="/contact" element={<Contact />} />
                <Route path="/productDetails" element={<ProductDetails />} />
                <Route path="/login" element={<Login />} />
                <Route path="/dashboard" element={<Dashboard />} />
