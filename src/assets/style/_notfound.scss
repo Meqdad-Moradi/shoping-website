@@ -2,8 +2,15 @@
    min-height: 100vh;
    @include flex(column, center);
    h1 {
-      font-size: 4rem;
-      color: $primary;
+      text-align: center;
+      font-size: 1rem;
+
+      span{
+         font-size: 4rem;
+         color: $primary;
+         display: block;
+         margin-top: .3em;
+      }
    }
 
    a{

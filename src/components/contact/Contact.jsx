@@ -3,6 +3,7 @@ import Header from "./../global/Header";
 import Footer from "./../global/Footer";
 import MainTitle from "./../global/MainTitle";
 import Input from "../global/Input";
+import { FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
    const [name, setName] = useState("");
@@ -11,11 +12,11 @@ const Contact = () => {
    return (
       <>
          <Header />
-         <div className="contact-page">
+         <section className="contact-page">
             <div className="container">
                <MainTitle
                   titleText="Contact me"
-                  subTitleText="If you would like to we know each other, I will be happy to see your message."
+                  subTitleText="If you would like to we know each other, I will be very happy to hear from you."
                />
 
                <div className="contat-body">
@@ -50,6 +51,7 @@ const Contact = () => {
 
                         <button type="submit" className="btn">
                            Send
+                           <FaPaperPlane className="send" />
                         </button>
                      </form>
                   </div>
@@ -66,12 +68,13 @@ const Contact = () => {
                         <strong>phone:</strong> 0043 660 34 48 348
                      </p>
                      <p>
-                        <strong>address:</strong> Darvin gasse 1, 4893 Wien, Austia
+                        <strong>address:</strong> Darvin gasse 1, 4893 Wien,
+                        Austia
                      </p>
                   </div>
                </div>
             </div>
-         </div>
+         </section>
          <Footer />
       </>
    );

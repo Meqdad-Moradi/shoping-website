@@ -700,8 +700,7 @@ footer {
   grid-auto-flow: dense;
   justify-content: space-between;
   align-items: center;
-  align-items: start;
-  gap: 2em;
+  gap: 3em;
 }
 .contact-page .contact-form-container {
   background-color: whitesmoke;
@@ -723,6 +722,17 @@ footer {
 .contact-page .contact-form-container .message textarea.input:focus ~ label,
 .contact-page .contact-form-container .message textarea.input:not(:placeholder-shown) ~ label {
   top: 0;
+}
+.contact-page .contact-form-container .btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-page .contact-form-container .btn .send {
+  font-size: 0.8em;
+  margin-left: 0.5em;
 }
 
 .single-product {
@@ -812,6 +822,7 @@ footer {
 }
 #login-page .login-content form .input {
   border-color: #e4e5e7;
+  color: #e4e5e7;
 }
 #login-page .login-content form label {
   color: #e4e5e7;
@@ -1013,8 +1024,14 @@ footer {
   align-items: center;
 }
 .notfound h1 {
+  text-align: center;
+  font-size: 1rem;
+}
+.notfound h1 span {
   font-size: 4rem;
   color: #cc3858;
+  display: block;
+  margin-top: 0.3em;
 }
 .notfound a {
   display: inline-block;

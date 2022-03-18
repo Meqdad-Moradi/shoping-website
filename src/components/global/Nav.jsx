@@ -25,7 +25,7 @@ const Nav = ({ onToggle }) => {
                <NavLink to="/contact">Contact</NavLink>
             </li>
             <li className="login-btn">
-               <NavLink to="/login">sign In</NavLink>
+               <NavLink to="/login">log in</NavLink>
             </li>
             <li className="cart-btn">
                <NavLink to="/cart">

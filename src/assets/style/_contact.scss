@@ -3,8 +3,7 @@
 
    .contat-body {
       @include grid();
-      align-items: start;
-      gap: 2em;
+      gap: 3em;
    }
 
    .contact-form-container {
@@ -24,6 +23,15 @@
          textarea.input:focus ~ label,
          textarea.input:not(:placeholder-shown) ~ label {
             top: 0;
+         }
+      }
+
+      .btn {
+         @include flex();
+
+         .send {
+            font-size: 0.8em;
+            margin-left: .5em;
          }
       }
    }
